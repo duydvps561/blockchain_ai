@@ -302,10 +302,9 @@ nav ul li a:hover {
 }
 
 /* Blog Section */
-/* Blog Section - Dark Theme */
 .blog-section {
   padding: 2.5rem;
-  background-color: #1a202c; /* Màu nền tối */
+  background-color: transparent; /* Loại bỏ màu nền */
 }
 
 .blog-title {
@@ -325,19 +324,23 @@ nav ul li a:hover {
 .blog-card {
   width: 800px;
   padding: 1.5rem;
-  background-color: #2d3748; /* Màu nền card tối */
+  /* background-color: #2d3748;  */
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0 4px 6px rgba(131, 131, 131, 0.381);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 150px; /* Chiều cao cố định của các ô */
+  opacity: 0; /* Bắt đầu với độ mờ */
+  animation: fadeIn 1s forwards; /* Thêm hiệu ứng fade-in */
 }
 
 .blog-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Thêm hiệu ứng di chuyển lên khi hover */
 }
 
 .blog-header {
@@ -366,10 +369,12 @@ nav ul li a:hover {
 .blog-link {
   flex-shrink: 0;
   margin-left: 1rem;
-  background-color: #4299e1;
+  /* background-color: #4299e1; */
   color: #ffffff;
   padding: 0.5rem 1rem;
+  border: 1px solid #f7f7f7;
   border-radius: 0.25rem;
+  font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -384,18 +389,27 @@ nav ul li a:hover {
 }
 
 .blog-button {
-  background-color: #4299e1;
+  /* background-color: #4299e1; */
   color: #ffffff;
   padding: 0.5rem 1.25rem;
-  border: none;
+  border: 1px solid #f7f7f7;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 
 .blog-button:hover {
   background-color: #3182ce;
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Đạt độ trong suốt đầy đủ */
+  }
+}
+
 
 /* Responsive cho màn hình nhỏ hơn */
 @media (max-width: 1024px) {
