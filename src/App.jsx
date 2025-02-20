@@ -79,30 +79,58 @@ function App() {
 
       {/* Features Section */}
       <Element name="features">
-        <section className="features p-10 text-center bg-gray-100">
-          <h2 className="text-3xl font-bold mb-6">Key Features</h2>
-          <div className="features-main ">
-            <div className="feature-card flex-1 max-w-xs p-6 bg-white rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold">Decentralized</h3>
-              <p className="mt-2 text-gray-600">
-                Blockchain eliminates single points of failure and ensures data
-                integrity across the network.
-              </p>
-            </div>
-            <div className="feature-card flex-1 max-w-xs p-6 bg-white rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold">Secure</h3>
-              <p className="mt-2 text-gray-600">
-                End-to-end encryption and cryptography make blockchain
-                technology one of the most secure systems.
-              </p>
-            </div>
-            <div className="feature-card flex-1 max-w-xs p-6 bg-white rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold">Transparent</h3>
-              <p className="mt-2 text-gray-600">
-                All transactions are visible and auditable in real time,
-                ensuring transparency across the board.
-              </p>
-            </div>
+        <section className="features p-10 bg-gray-100">
+          <h2 className="text-3xl font-bold text-center mb-10">Key Features</h2>
+
+          <div className="feature-main">
+            {[
+              {
+                title: "Beginner Plan",
+                price: "$199/month",
+                description: "Blockchain eliminates single",
+                features: [
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                ],
+              },
+              {
+                title: "Intermediate Plan",
+                price: "$349/month",
+                description: "End-to-end encryption",
+                features: [
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                ],
+              },
+              {
+                title: "Advanced Plan",
+                price: "$450/month",
+                description: "All transactions are visible",
+                features: [
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                  "Access to basic blockchain guides",
+                ],
+              },
+            ].map((plan, index) => (
+              <div
+                key={index}
+                className="feature-card p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2"
+              >
+                <h3 className="text-xl font-semibold mb-2">{plan.title}</h3>
+                <p className="price">{plan.price}</p>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
+                <div className="feature-des space-y-2">
+                  {plan.features.map((feature, i) => (
+                    <p key={i} className="border-b border-gray-200 pb-2">
+                      {feature}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </Element>

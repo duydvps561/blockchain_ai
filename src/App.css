@@ -105,37 +105,83 @@ header p {
   font-size: 1.25rem;
   margin-bottom: 40px;
 }
+/*festures*/
 
-/* Features Section */
 .features {
+  padding: 2.5rem; /* p-10 */
   text-align: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 80px 20px;
-  color: #e4e4e4;
 }
+
 .features h2 {
-  font-size: 2.8rem;
+  font-size: 2rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #fafafa;
+  margin-bottom: 2.5rem; /* mb-10 */
 }
-.features-main {
+
+/* BỐ CỤC GRID */
+.feature-main {
   display: flex;
+  flex-wrap: wrap; /* Cho phép các item xuống hàng khi không đủ chỗ */
+  gap: 2rem; /* Khoảng cách giữa các item */
 }
+
+/* CARD TÍNH NĂNG */
+
 .feature-card {
-  margin-top: 15px;
-  max-width: 350px;
-  background-color: white;
-  color: black;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: start;
+  padding: 15px;
+  flex: 1 1 calc(33.33% - 2rem); /* 3 cột, trừ đi khoảng cách */
+  max-width: calc(33.33% - 2rem); /* Đảm bảo không vượt quá 3 cột */
+  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+  border: 1px solid #6b7280;
+  border-radius: 15px;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* TIÊU ĐỀ PLAN */
+.feature-card h3 {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: 600;
+  color: #ffffff; /* text-gray-800 */
+  margin-bottom: 0.5rem;
+}
+
+/* GIÁ TIỀN */
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fc0000;
+  margin: 1rem 0;
+}
+
+/* MÔ TẢ */
+.feature-card p {
+  color: #6b7280; /* text-gray-600 */
+  margin-bottom: 0.5rem;
+}
+
+/* DANH SÁCH TÍNH NĂNG */
+.feature-des {
+  margin-top: 1rem;
+}
+
+.feature-des p {
+  padding: 0.5rem 0;
+  color: #374151; /* text-gray-700 */
+  transition: color 0.2s;
+}
+
+.feature-des p:last-child {
+  border-bottom: none;
+}
+
+.feature-des p:hover {
+  color: #2563eb; /* text-blue-600 */
 }
 
 /* Contact Section */
