@@ -9,13 +9,30 @@
 /* Body Styling */
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(to right, #4e73df, #1cc88a);
+  background-image: url("../public/img/backgroud.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: rgba(51, 51, 51, 0.438); /* Thêm độ trong suốt */
+  background-color: rgba(51, 51, 51, 0.24);
   padding: 15px 50px;
   position: fixed;
   width: 100%;
@@ -28,19 +45,10 @@ nav {
 }
 
 /* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 1.5rem;
-  font-weight: bold;
+.object-contain {
+  width: 200px;
+  height: 50px;
+  object-fit: contain;
 }
 
 /* Navigation Links */
@@ -48,10 +56,6 @@ nav ul {
   display: flex;
   list-style-type: none;
   gap: 30px;
-}
-
-nav ul li {
-  list-style: none;
 }
 
 nav ul li a {
@@ -67,6 +71,7 @@ nav ul li a:hover {
 
 /* Wallet Button */
 .wallet-btn {
+  margin-left: 20px;
   padding: 12px 25px;
   background-color: #ffbb33;
   border: none;
@@ -85,6 +90,8 @@ nav ul li a:hover {
 
 /* Home Section */
 header {
+  width: 100%;
+  height: 450px;
   text-align: center;
   padding: 150px 20px 80px;
 }
@@ -99,48 +106,31 @@ header p {
   margin-bottom: 40px;
 }
 
-.btn-primary {
-  padding: 15px 30px;
-  background-color: #ffbb33;
-  border: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1.125rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #ffaa00;
-  transform: scale(1.05);
-}
-
 /* Features Section */
 .features {
-  justify-content: center;
-  flex-wrap: wrap; /* Đảm bảo xuống hàng trên màn hình nhỏ */
-  gap: 25px;
   text-align: center;
-  padding: 80px 50px;
-  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 20px;
+  color: #e4e4e4;
+}
+.features h2 {
+  font-size: 2.8rem;
 }
 .features-main {
   display: flex;
-  gap: 5px;
-  margin-top: 15px;
 }
-/* Feature Card */
 .feature-card {
-  flex: 1 1 calc(33.333% - 25px);
-  max-width: 350px; /* Giới hạn kích thước tối đa */
+  margin-top: 15px;
+  max-width: 350px;
   background-color: white;
   color: black;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
@@ -148,34 +138,94 @@ header p {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.feature-card h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px;
+  color: #f7f7f7;
+  text-align: center;
 }
 
-.feature-card p {
-  font-size: 1rem;
-  color: #555;
+.contact-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: #fcfcfc;
+  font-weight: bold;
 }
 
-/* Responsive cho màn hình nhỏ hơn */
-@media (max-width: 1024px) {
-  .feature-card {
-    flex: 1 1 calc(50% - 25px); /* Chia thành 2 cột */
-  }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1300px;
+  margin: auto;
 }
 
-@media (max-width: 768px) {
-  .feature-card {
-    flex: 1 1 100%; /* Chuyển về 1 cột */
-  }
+.contact-box {
+  background-color: rgba(151, 151, 151, 0.281);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: start;
+}
+
+.contact-img {
+  width: 150px;
+  height: 70px;
+}
+
+.contact-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer Section */
 footer {
-  text-align: center;
-  background-color: #333;
+  background-color: rgba(49, 49, 49, 0.192);
   color: white;
   padding: 20px 0;
-  margin-top: 50px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .feature-card {
+    flex: 1 1 50%;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-main {
+    flex-direction: column;
+  }
+  .feature-card {
+    flex: 1 1 100%;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
 }

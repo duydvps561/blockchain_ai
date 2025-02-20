@@ -9,10 +9,12 @@ function App() {
       <nav className="bg-gray-900 text-white p-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Logo" className="h-10" />
-          <span className="text-xl font-semibold">Blockchain</span>
+          <img
+            src="../public/img/iotext.png"
+            alt="Logo"
+            className=" object-contain"
+          />
         </div>
-
         {/* Navigation Links */}
         <ul className="flex space-x-6">
           <li>
@@ -58,9 +60,7 @@ function App() {
         </ul>
 
         {/* Wallet Button */}
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg">
-          Wallet
-        </button>
+        <button className="wallet-btn">Wallet</button>
       </nav>
 
       {/* Home Section */}
@@ -108,11 +108,70 @@ function App() {
       </Element>
 
       {/* Contact Section */}
-      <Element name="contact">
-        <footer className="text-center bg-gray-900 text-white py-6">
-          <p>&copy; 2025 Blockchain Technologies. All Rights Reserved.</p>
-        </footer>
+      <Element name="contact" className="contact-section">
+        <h2>Contact Us</h2>
+        <div className="contact-grid">
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/snarkify.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/orichi.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/qai.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/bqlabs.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/clique.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/zkm.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/degame.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/avail.png"></img>
+            <p>
+              Blockchain technology is an advanced database mechanism that
+              allows transparent information sharing within a business network.
+            </p>
+          </div>
+        </div>
       </Element>
+      <footer>
+        <p>&copy; 2025 Blockchain. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 }
