@@ -72,20 +72,16 @@ function App() {
           </video>
           <div className="overlay"></div>
           <div className="container">
-            <h1 className="header__title">Welcome to Blockchain</h1>
             <p className="header__subtitle">
-              Revolutionizing the way we do business, manage data, and secure
-              transactions.
+              Powering trustless settelement & trust-minized vertification
+              onBitcoin at 99% lower cost for all Layers & Apps
             </p>
-            <button
-              className="header__button btn-primary"
-              aria-label="Get Started"
-            >
-              Get Started
-            </button>
-            <div className="scroll-indicator" aria-label="Scroll Down">
-              <span>Scroll Down</span>
-              <div className="arrow"></div>
+            <h1 className="header__title">
+              Bitcoin backed<br></br> internet
+            </h1>
+            <div className="header__button btn-primary">
+              <button>Get Started</button>
+              <button>Doccumentation</button>
             </div>
           </div>
         </header>

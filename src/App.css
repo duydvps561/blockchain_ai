@@ -8,14 +8,10 @@
 
 /* Body Styling */
 body {
+  margin: auto;
   font-family: "Arial", sans-serif;
-  background-image: url("../public/img/backgroud.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #000000;
   color: white;
-  overflow-x: hidden;
 }
 
 html,
@@ -32,7 +28,7 @@ body {
 
 /* Navigation Bar */
 nav {
-  background-color: rgba(51, 51, 51, 0.24);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.048), transparent);
   padding: 15px 50px;
   position: fixed;
   width: 100%;
@@ -61,31 +57,36 @@ nav ul {
 nav ul li a {
   color: white;
   font-size: 1.2rem;
+  padding: 5px 10px;
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
-nav ul li a:hover {
-  color: #ffbb33;
+nav ul li :hover {
+  border: #979797 solid 1px;
+  border-radius: 20px;
+  background-color: #68686873;
+  color: white;
 }
 
 /* Wallet Button */
 .wallet-btn {
   margin-left: 20px;
-  padding: 12px 25px;
-  background-color: #ffbb33;
-  border: none;
-  color: black;
+  padding: 10px 20px;
+  border: #979797 solid 1px;
+  color: rgba(255, 255, 255, 0.993);
   font-weight: bold;
   font-size: 1.125rem;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .wallet-btn:hover {
-  background-color: #ffaa00;
-  transform: scale(1.05);
+  background-color: #68686873;
+  color: rgba(255, 255, 255, 0.993);
+  border: #979797 solid 1px;
 }
 
 /* home Section */
@@ -122,11 +123,7 @@ nav ul li a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.6)
-  );
+  background-color: rgba(0, 0, 0, 0.644);
   z-index: 0;
 }
 
@@ -179,20 +176,22 @@ nav ul li a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 /*festures*/
-
 .header__button {
+  display: block;
+  gap: 15px;
+}
+.header__button button {
   padding: 15px 30px;
   background-color: var(--primary-color);
   border: none;
   color: white;
-  font-weight: bold;
   font-size: 1.125rem;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.header__button:hover {
+.header__button button:hover {
   background-color: var(--secondary-color);
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.419);
@@ -409,7 +408,6 @@ nav ul li a:hover {
     opacity: 1; /* Đạt độ trong suốt đầy đủ */
   }
 }
-
 
 /* Responsive cho màn hình nhỏ hơn */
 @media (max-width: 1024px) {
