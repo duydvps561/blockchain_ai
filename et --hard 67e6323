@@ -1,0 +1,15 @@
+[33m57e4db9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhome_blog[m[33m, [m[1;31morigin/home_blog[m[33m, [m[1;32mduy[m[33m)[m HEAD@{0}: checkout: moving from main to home_blog
+[33m67e6323[m[33m ([m[1;32mmain[m[33m)[m HEAD@{1}: commit: blog+responsive blog
+[33mf4f54f3[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{2}: reset: moving to origin/master
+[33mea0e933[m HEAD@{3}: reset: moving to HEAD
+[33mea0e933[m HEAD@{4}: commit: img,vid to url
+[33m5ed4bee[m HEAD@{5}: Branch: renamed refs/heads/master to refs/heads/main
+[33m5ed4bee[m HEAD@{7}: commit: nâng cấp hiệu ứng blog
+[33m2dbdade[m HEAD@{8}: pull --tags origin master: Fast-forward
+[33m57e4db9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhome_blog[m[33m, [m[1;31morigin/home_blog[m[33m, [m[1;32mduy[m[33m)[m HEAD@{9}: merge home_blog: Fast-forward
+[33m8144215[m HEAD@{10}: checkout: moving from home_blog to master
+[33m57e4db9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhome_blog[m[33m, [m[1;31morigin/home_blog[m[33m, [m[1;32mduy[m[33m)[m HEAD@{11}: checkout: moving from 57e4db9026c4e4559d6a5e3001f98c83450740ff to home_blog
+[33m57e4db9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhome_blog[m[33m, [m[1;31morigin/home_blog[m[33m, [m[1;32mduy[m[33m)[m HEAD@{12}: checkout: moving from home+blog to 57e4db9
+[33mb800c99[m[33m ([m[1;32mhome+blog[m[33m)[m HEAD@{13}: checkout: moving from duy to home+blog
+[33m57e4db9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhome_blog[m[33m, [m[1;31morigin/home_blog[m[33m, [m[1;32mduy[m[33m)[m HEAD@{14}: commit: Bổ sung home blog
+[33m8144215[m HEAD@{15}: clone: from https://github.com/duydvps561/blockchain_ai
