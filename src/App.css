@@ -441,37 +441,121 @@ nav ul li :hover {
   text-align: center;
 }
 
-.contact-section h2 {
+.contact-title h2 {
   font-size: 2.8rem;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   color: #fcfcfc;
   font-weight: bold;
+}
+.contact-title p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.contact__btn {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.contact__btn button {
+  padding: 10px 20px;
+  border: 1px solid #818181; /* Màu viền xanh dương */
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contact__btn button:hover {
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact__btn button:active {
+  box-shadow: none;
+}
+
+.contact__btn button:focus {
+  background-color: #a8a8a870;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .contact__btn {
+    gap: 5px;
+  }
+
+  .contact__btn button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.seeAll {
+  position: relative; /* Đặt phần tử cha ở vị trí tương đối */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.seeAll__btn {
+  position: absolute;
+  right: 250px;
+  top: 70%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.seeAll__btn:hover {
+  background-color: #5555553b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seeAll__btn:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: none;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
   max-width: 1300px;
   margin: auto;
 }
 
 .contact-box {
-  background-color: rgba(151, 151, 151, 0.281);
-  padding: 40px;
+  padding: 20px;
   border-radius: 12px;
+  border: 1px solid #444444;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: start;
+  cursor: pointer;
+}
+.contact-box p {
+  color: #f7f7f7;
+  font-size: 14px;
 }
 
 .contact-img {
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 50px;
 }
 
 .contact-box:hover {
-  transform: translateY(-7px);
+  border: 1px solid #ffffff;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 

@@ -86,7 +86,67 @@ function App() {
           </div>
         </header>
       </Element>
-
+      <Element name="contact" className="contact-section">
+        <div className="contact-title">
+          <h2>
+            Powering Trust-Minimized<br></br>Settelement on Bitcoin
+          </h2>
+          <p>
+            LayerEdge opens door for anyone to tap into Bitcoin security,
+            <br></br> while talking only upto 1% of the Bitcion blockspace they
+            would<br></br> have taken building rirectly without LayerEdge
+          </p>
+        </div>
+        <div className="contact__btn">
+          <button>All</button>
+          <button>Chains</button>
+          <button>Protocol Infra</button>
+          <button>Zk Provers</button>
+          <button>AI</button>
+          <button>zKVM</button>
+          <button>DA</button>
+          <button>RAAS</button>
+          <button>DePin</button>
+          <button>Others</button>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/snarkify.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/orichi.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/qai.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/bqlabs.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/clique.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/zkm.png"></img>
+            <p>Blockchain technology is an advanced database mechanism </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/degame.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/avail.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+        </div>
+        <div className="seeAll">
+          <button className="seeAll__btn">See All</button>
+        </div>
+      </Element>
       {/* Features Section */}
       <Element name="features">
         <section className="features p-10 bg-gray-100">
@@ -192,67 +252,7 @@ function App() {
         </section>
       </Element>
       {/* Contact Section */}
-      <Element name="contact" className="contact-section">
-        <h2>Contact Us</h2>
-        <div className="contact-grid">
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/snarkify.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/orichi.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/qai.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/bqlabs.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/clique.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/zkm.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/degame.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="../public/img/avail.png"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-        </div>
-      </Element>
+
       <footer>
         <p>&copy; 2025 Blockchain. All Rights Reserved.</p>
       </footer>
