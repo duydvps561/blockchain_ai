@@ -306,6 +306,76 @@ nav ul li :hover {
   color: #6b7280; /* text-gray-600 */
   margin-bottom: 0.5rem;
 }
+/* Cook Section */
+.cook-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Giảm khoảng cách để section không quá dài */
+  padding: 50px 0;
+  width: 100%;
+}
+.cook-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 70px;
+  width: 100%;
+  max-width: 1200px; /* Giá trị max phù hợp theo thiết kế */
+  margin: 0 auto;
+}
+
+
+/* Container giữ marquee – giới hạn chiều rộng và ẩn phần tràn */
+.partnerList {
+  width: 100%;         /* Giới hạn theo bố cục của trang */
+  height: 120px;       /* Chiều cao theo thiết kế */
+  overflow: hidden;    /* Ẩn các phần nội dung vượt ra ngoài */
+  position: relative;
+  border: 2px solid rgba(96,96,96,0.159);
+}
+/* Container marquee chứa tất cả các partnerItem */
+.marquee {
+  display: flex;
+  flex-wrap: nowrap;   /* Giữ các hình theo hàng không xuống dòng */
+  /* Không cần đặt width cho .marquee – để nó tự mở rộng theo nội dung */
+  animation: marqueeAnim 30s linear infinite;
+  column-gap: 7rem;
+}
+/* Mỗi phần tử partnerItem: kích thước cố định, khoảng cách hợp lý */
+.partnerItem {
+  flex: none;          /* Không co giãn */
+  width: 100px;        /* Bạn có thể điều chỉnh kích thước theo ý */
+  height: 50px;
+  margin-right: 20px;
+}
+
+/* Các hình ảnh bên trong */
+.partnerItem img {
+  width: 170px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Animation chuyển động marquee */
+@keyframes marqueeAnim {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Khi animation chạy, toàn bộ content dịch sang trái.
+       Vì container .partnerList có overflow: hidden, chỉ phần bên trong khung mới được hiển thị. */
+    transform: translateX(-100%);
+  }
+}
+.cook-section h2 {
+  font-size: 60px; /* Giảm kích thước tiêu đề so với 60px để phù hợp với layout mới */
+  color: #bfbfbf;
+  font-family: var(--primary-font);
+  margin-bottom: 30px;
+}
 
 /* Blog Section */
 .blog-section {
