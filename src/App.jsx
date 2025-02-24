@@ -29,6 +29,16 @@ function App() {
           </li>
           <li>
             <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-blue-400"
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link
               to="features"
               smooth={true}
               duration={500}
@@ -47,16 +57,6 @@ function App() {
               Blog
             </Link>
           </li>
-          <li>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer hover:text-blue-400"
-            >
-              Contact
-            </Link>
-          </li>
         </ul>
 
         {/* Wallet Button */}
@@ -67,7 +67,10 @@ function App() {
       <Element name="home">
         <header className="header">
           <video className="video-background" autoPlay loop muted>
-            <source src="https://media-hosting.imagekit.io//2696cb0cd649448a/background.webm?Expires=1834715616&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zQtkWvcIgA~0o0FWlahvHDGQl6HnJR1jtNyNNf5jpTYBKk4aENaW0TY7opW6cfxjx~WelC95xok2EmKaocGgsFWB3ixVVaEBS3Xaf7PMLFfmPFZs~a0X2VhEH69f8HwYoguq4HvUmt6PUpxANKEu-ST46yr0quRMEMmB5Hk0l81jqv-LRxaKmmtSRvD3d7hbJecsuzyxvKi~2zP5OrljEUHJVJy2oAaeC-CGVcOQwLo8YHSZ0oBRrYovCP~NOBkcFYMba0lfHcH9GJGEQz2CvA5dN2maFQsbFi1h1BEGlFNRk5Ddqsi-ckKLvvbp6VclFrTOY4zzkqw3msucM2RTyQ__" type="video/mp4" />
+            <source
+              src="https://media-hosting.imagekit.io//2696cb0cd649448a/background.webm?Expires=1834715616&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zQtkWvcIgA~0o0FWlahvHDGQl6HnJR1jtNyNNf5jpTYBKk4aENaW0TY7opW6cfxjx~WelC95xok2EmKaocGgsFWB3ixVVaEBS3Xaf7PMLFfmPFZs~a0X2VhEH69f8HwYoguq4HvUmt6PUpxANKEu-ST46yr0quRMEMmB5Hk0l81jqv-LRxaKmmtSRvD3d7hbJecsuzyxvKi~2zP5OrljEUHJVJy2oAaeC-CGVcOQwLo8YHSZ0oBRrYovCP~NOBkcFYMba0lfHcH9GJGEQz2CvA5dN2maFQsbFi1h1BEGlFNRk5Ddqsi-ckKLvvbp6VclFrTOY4zzkqw3msucM2RTyQ__"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
           <div className="overlay"></div>
@@ -86,7 +89,67 @@ function App() {
           </div>
         </header>
       </Element>
-
+      <Element name="contact" className="contact-section">
+        <div className="contact-title">
+          <h2>
+            Powering Trust-Minimized<br></br>Settelement on Bitcoin
+          </h2>
+          <p>
+            LayerEdge opens door for anyone to tap into Bitcoin security,
+            <br></br> while talking only upto 1% of the Bitcion blockspace they
+            would<br></br> have taken building rirectly without LayerEdge
+          </p>
+        </div>
+        <div className="contact__btn">
+          <button>All</button>
+          <button>Chains</button>
+          <button>Protocol Infra</button>
+          <button>Zk Provers</button>
+          <button>AI</button>
+          <button>zKVM</button>
+          <button>DA</button>
+          <button>RAAS</button>
+          <button>DePin</button>
+          <button>Others</button>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/snarkify.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/orichi.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/qai.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/bqlabs.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/clique.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/zkm.png"></img>
+            <p>Blockchain technology is an advanced database mechanism </p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/degame.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+          <div className="contact-box">
+            <img className="contact-img" src="../public/img/avail.png"></img>
+            <p>Blockchain technology is an advanced database mechanism</p>
+          </div>
+        </div>
+        <div className="seeAll">
+          <button className="seeAll__btn">See All</button>
+        </div>
+      </Element>
       {/* Features Section */}
       <Element name="features">
         <section className="features p-10 bg-gray-100">
@@ -147,14 +210,17 @@ function App() {
 
       {/* cooking Section */}
       <Element name="cook">
-      <section className="cook-section">
-    <div className="cook-main">
-      <h2>Who are we cooking with?</h2>
-      <div className="partnerList">
-        <div className="marquee">
-          {/* Mỗi partnerItem là 1 khối chứa hình */}
+        <section className="cook-section">
+          <div className="cook-main">
+            <h2>Who are we cooking with?</h2>
+            <div className="partnerList">
+              <div className="marquee">
+                {/* Mỗi partnerItem là 1 khối chứa hình */}
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//853d91b13fd741c7/gateway.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rTRh5JgoYvzjJSP2ThaGkGJDoawckW1VtVASx73Z1A11QFxhVMQ-q~GqjM4XYZSZyKiw-OAhsdlsuyMsE8PqA5WpMjGzq0ekLy2OOc00-MqPSVxb00~N49Kt4e98w59tqLeOyZRc-4amiTfkXiZPgKk5ZeN9VPUXy9iFpq7nW5VKKSMDsob-dzJbKzxeyMoEfswg3muSaddxzRNJ71mkEpc0ZirxuPlPsaKiPodeqv5~rOp-q3KDOvEASbgmWft-VqChWGwCdIzy7MabfT0Inx0GPmX7dHA1TylOPHrA62m1JPFZwV~BXkbFrA0SMO3O3IKF1katRnfUsydz~QT4hw__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//853d91b13fd741c7/gateway.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rTRh5JgoYvzjJSP2ThaGkGJDoawckW1VtVASx73Z1A11QFxhVMQ-q~GqjM4XYZSZyKiw-OAhsdlsuyMsE8PqA5WpMjGzq0ekLy2OOc00-MqPSVxb00~N49Kt4e98w59tqLeOyZRc-4amiTfkXiZPgKk5ZeN9VPUXy9iFpq7nW5VKKSMDsob-dzJbKzxeyMoEfswg3muSaddxzRNJ71mkEpc0ZirxuPlPsaKiPodeqv5~rOp-q3KDOvEASbgmWft-VqChWGwCdIzy7MabfT0Inx0GPmX7dHA1TylOPHrA62m1JPFZwV~BXkbFrA0SMO3O3IKF1katRnfUsydz~QT4hw__"
+                  />
                 </div>
                 <div className="partnerItem">
                   <img
@@ -163,7 +229,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//92ebe7a8aad6489c/clique.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p8oNUyomKTkg2XYz2R37ITZ1enj2LqiY5Om7MhTZxYRhLKdScHK15HO2A-s78Khgr-TWNGj4uWO100Gb-o0cne~w41kGIae22ylkc02ASsegLuOu~vmXaVjXzbKdBKsFqMTt0TQHCZ5nsrMwZN5yaGd7QErpKUjqlKo3JZfNRdXJ6ijgO2PqJh49mI2pNHrKL~FrvmLsn7jGGneWAaWVm2hkkA3e-9dblmaR7GT1t7VQdxPaipIe1Kt1BqtvYn5TON8dR3YGWtUZ-MxtTSB4Np3MnobSgcYLwtWFXrimC0AKztZd916PW-xLH4gKl6KBv2hxLe0Z6nquqxYNCUIkLQ__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//92ebe7a8aad6489c/clique.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p8oNUyomKTkg2XYz2R37ITZ1enj2LqiY5Om7MhTZxYRhLKdScHK15HO2A-s78Khgr-TWNGj4uWO100Gb-o0cne~w41kGIae22ylkc02ASsegLuOu~vmXaVjXzbKdBKsFqMTt0TQHCZ5nsrMwZN5yaGd7QErpKUjqlKo3JZfNRdXJ6ijgO2PqJh49mI2pNHrKL~FrvmLsn7jGGneWAaWVm2hkkA3e-9dblmaR7GT1t7VQdxPaipIe1Kt1BqtvYn5TON8dR3YGWtUZ-MxtTSB4Np3MnobSgcYLwtWFXrimC0AKztZd916PW-xLH4gKl6KBv2hxLe0Z6nquqxYNCUIkLQ__"
+                  />
                 </div>
                 <div className="partnerItem">
                   <img
@@ -172,10 +241,16 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//eb58588eb85c4df6/b2.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jzzS9r5Uxn7hv-qKnCOfTWMdHuVV9X95fj8qq5mQQU4ca4ZiVle7EtzxiCdBmIQr5FaNQ9e-DVKNQwREVBb~nbKw5wPyvKBhjXoSgCWdENzZ3WIvjWANy9WQVGXZqSbamBR1jNnKdGmGLSP0HDCHQpEqO~slGWxulutyTKF7Z6XX3hkGoJHOO675EoRiOngUnervjXN5-1Ra1ye4UOwn8oTWyBrV59AVBJWw~41HsjHy0UPQM1nUBTPQdtuWb4yiIBtBJQsQelLYycJALK6Mhhp8LnIUzr7FJKgXN7Z9q2~eWD1SHh39HfFILe2qxlTtRj6WxrtW3muQ~rF1yu9GBw__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//eb58588eb85c4df6/b2.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jzzS9r5Uxn7hv-qKnCOfTWMdHuVV9X95fj8qq5mQQU4ca4ZiVle7EtzxiCdBmIQr5FaNQ9e-DVKNQwREVBb~nbKw5wPyvKBhjXoSgCWdENzZ3WIvjWANy9WQVGXZqSbamBR1jNnKdGmGLSP0HDCHQpEqO~slGWxulutyTKF7Z6XX3hkGoJHOO675EoRiOngUnervjXN5-1Ra1ye4UOwn8oTWyBrV59AVBJWw~41HsjHy0UPQM1nUBTPQdtuWb4yiIBtBJQsQelLYycJALK6Mhhp8LnIUzr7FJKgXN7Z9q2~eWD1SHh39HfFILe2qxlTtRj6WxrtW3muQ~rF1yu9GBw__"
+                  />
                 </div>
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//74bb11962ff4472c/u2u.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UCkcYDef-m4ng2SxQrJDMIe-bT0qyhQaWDNdTTuYkBY70d0aHEnI8SFCGXariP0ABL5LynPKNdXQ-HyrAj3Hco~biLp79qqB-Ii4AskZaX9oKe013iB6RJWgzSjuvZVtPCwM1C~lEY0Psnot9FDDncpD0PnjnsQcuzB~LJqdGTYwcAPbS3mh22RcH000r6HvvKsyeX-IeL97afN2x9~n7v42wH0bn01drmUf2LY~3pJYbyZZ8H58Nzhdllv1znuNcpnjl9Lmn2fUX6fmRkMMfpgg1UU6tWImuvfPXidNmGB926F85JNbY5g58S16ySFXGBmt1UmFO~nsj7kZxmQKTg__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//74bb11962ff4472c/u2u.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UCkcYDef-m4ng2SxQrJDMIe-bT0qyhQaWDNdTTuYkBY70d0aHEnI8SFCGXariP0ABL5LynPKNdXQ-HyrAj3Hco~biLp79qqB-Ii4AskZaX9oKe013iB6RJWgzSjuvZVtPCwM1C~lEY0Psnot9FDDncpD0PnjnsQcuzB~LJqdGTYwcAPbS3mh22RcH000r6HvvKsyeX-IeL97afN2x9~n7v42wH0bn01drmUf2LY~3pJYbyZZ8H58Nzhdllv1znuNcpnjl9Lmn2fUX6fmRkMMfpgg1UU6tWImuvfPXidNmGB926F85JNbY5g58S16ySFXGBmt1UmFO~nsj7kZxmQKTg__"
+                  />
                 </div>
                 <div className="partnerItem">
                   <img
@@ -196,7 +271,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//4d8ff1114c0941ef/playai.jpg?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=M0nr3MZZf-koXunvCK-fIv9nntBKvsHpjE3abn7QsZDL2x3MRZOgZ7whKFMTAAZ4cE9mDum8f8ZX9xzHpRub~ODrGInd-DazU2~1rcQeYzJ3n43PJXCz4YhXtTeMcxUi38XYQlQObP97XysKXwdu32doHQqKk29YCTq-v~hKcRKrFIKL~dBJGlbDsAU9XI509Ojml76GOFUc3UTVv48OaPboTFZq6FVol-zDXJTVNAWfTxrBFVB1I2wjIS9pTycSYcDwwFvKR81rSKw7GToABVykmZQ4wF~jAKqGEzg~lXPyW~8GfSL-rDxoNDCvgndez~DyLQMBOp8ycJu-TF212g__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//4d8ff1114c0941ef/playai.jpg?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=M0nr3MZZf-koXunvCK-fIv9nntBKvsHpjE3abn7QsZDL2x3MRZOgZ7whKFMTAAZ4cE9mDum8f8ZX9xzHpRub~ODrGInd-DazU2~1rcQeYzJ3n43PJXCz4YhXtTeMcxUi38XYQlQObP97XysKXwdu32doHQqKk29YCTq-v~hKcRKrFIKL~dBJGlbDsAU9XI509Ojml76GOFUc3UTVv48OaPboTFZq6FVol-zDXJTVNAWfTxrBFVB1I2wjIS9pTycSYcDwwFvKR81rSKw7GToABVykmZQ4wF~jAKqGEzg~lXPyW~8GfSL-rDxoNDCvgndez~DyLQMBOp8ycJu-TF212g__"
+                  />
                 </div>
                 <div className="partnerItem">
                   <img
@@ -223,7 +301,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem">
-                  <img alt="" src="https://media-hosting.imagekit.io//7164dcf6566f4c46/nubit.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sFmtXPAd78urppNKHpcW~VxVljU7p5kf5NIKzGp8BkbrfYwbR3gD2AmqK63Cawqole5VK-LCyGzgZKnye-YN36qGydB6AOW7xWWpKk-Sl9tcEAfzkDDnCDgQ3yZH4ykDcH-Key8kD64PzoCRSvULJlP5dfpV4Xu~Z6wY5hnFjMMj6xTMQcAW6fawVz2UPXT0i8mBO-Pe~o6KDcbTrq5kDVmkKH-WSB8w8hi7eJ4mv9pmD1gsZYdkSwG7wJn18wEMVzwd~EGIWXOQGCFc7vujLvRn4WSxIB5uBFgWnKI4UAzJJm0Y5Xo4FpnZ3Cr8AzozYeVwE1bPZ6WcAP6Zyb3x3w__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//7164dcf6566f4c46/nubit.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sFmtXPAd78urppNKHpcW~VxVljU7p5kf5NIKzGp8BkbrfYwbR3gD2AmqK63Cawqole5VK-LCyGzgZKnye-YN36qGydB6AOW7xWWpKk-Sl9tcEAfzkDDnCDgQ3yZH4ykDcH-Key8kD64PzoCRSvULJlP5dfpV4Xu~Z6wY5hnFjMMj6xTMQcAW6fawVz2UPXT0i8mBO-Pe~o6KDcbTrq5kDVmkKH-WSB8w8hi7eJ4mv9pmD1gsZYdkSwG7wJn18wEMVzwd~EGIWXOQGCFc7vujLvRn4WSxIB5uBFgWnKI4UAzJJm0Y5Xo4FpnZ3Cr8AzozYeVwE1bPZ6WcAP6Zyb3x3w__"
+                  />
                 </div>
                 <div className="partnerItem">
                   <img
@@ -238,13 +319,22 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//7434f21c99e24053/iotext.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yH6w6UiWaHBVP0Sgt8-9kDtG3IEpnPhKIWODC9xT6JTgl0K2Q~WMICqj~ZaAUQGYghh1ZX0YK6bxiQUQo-mP-viIsPXIR5G528BijYK57wOMPjSjWCPA~3nbz07eTZMfdMDeZIMRw-hAAan4WZwVvvbe1PjgTuRXBai3~mnOJprd0CyYsBuxN66eWau83xxb9y0J78kMO5BGeogF4BnoQXUw4lKVdS0fsAKGhW6b5kKVNVBGl5qSQZ4lMKm7c-Fz1W5hK0vDZreraEjuWkfiBTJsNCwPULKuCC5kG4PyNDt4Usi4nUZI1aJy8Dmf55D12YJz00xgs5rOYazb7kZPBg__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//7434f21c99e24053/iotext.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yH6w6UiWaHBVP0Sgt8-9kDtG3IEpnPhKIWODC9xT6JTgl0K2Q~WMICqj~ZaAUQGYghh1ZX0YK6bxiQUQo-mP-viIsPXIR5G528BijYK57wOMPjSjWCPA~3nbz07eTZMfdMDeZIMRw-hAAan4WZwVvvbe1PjgTuRXBai3~mnOJprd0CyYsBuxN66eWau83xxb9y0J78kMO5BGeogF4BnoQXUw4lKVdS0fsAKGhW6b5kKVNVBGl5qSQZ4lMKm7c-Fz1W5hK0vDZreraEjuWkfiBTJsNCwPULKuCC5kG4PyNDt4Usi4nUZI1aJy8Dmf55D12YJz00xgs5rOYazb7kZPBg__"
+                  />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//3812cbbe96804b33/orichi.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=28XDMYf~U26XUO9SmNM9iI-xN2AhoVzMQiAA9d0yvwoo2nramEF~JHgRtCZo4QM8NniSpZnlkiqcD4w9P00grBbAIDN79B7anu~Pl0C4QTOhwEqCgafe~Cboq4UVnxsh5PkquC6uhQpLKUmonNL8Th34GPsmS3ClH2RKnjHFuZ8kWXgROs22Vv42EvRqqVyREebdwhhkGpbOEae9oNdqcKPeeZaimJQGLBrGxh-rw-q7RXYAbFg-LF8IvI~e-WvgHlQITfw7q3hlDqAAdfpBHWd60r4gK6shePZuyFgmqMWpVc6eQeEFTHCod3nNATuu9Icb31Dc9kLZ6Uc2moqdtw__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//3812cbbe96804b33/orichi.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=28XDMYf~U26XUO9SmNM9iI-xN2AhoVzMQiAA9d0yvwoo2nramEF~JHgRtCZo4QM8NniSpZnlkiqcD4w9P00grBbAIDN79B7anu~Pl0C4QTOhwEqCgafe~Cboq4UVnxsh5PkquC6uhQpLKUmonNL8Th34GPsmS3ClH2RKnjHFuZ8kWXgROs22Vv42EvRqqVyREebdwhhkGpbOEae9oNdqcKPeeZaimJQGLBrGxh-rw-q7RXYAbFg-LF8IvI~e-WvgHlQITfw7q3hlDqAAdfpBHWd60r4gK6shePZuyFgmqMWpVc6eQeEFTHCod3nNATuu9Icb31Dc9kLZ6Uc2moqdtw__"
+                  />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//039febe2739441dd/o3layer.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QGo4zNRrxST6dtpRJQN4Np2zzyJXt5~hEZg5HV1iSki2fTj2M5QkLIa5zDVjhg4mArw0x7k4bLgQBVCE5b2LJdSN9kn~qlw~tx4iqfdsPOvQxdVKwVftmcgJLnyT065MaAyICHjqWYxzMQzxjwZwWOPoGeaiK6GbW2GWcOZ24qY0ZahwB7OIZhAxF3E8XciDshJMNrIYYs13-K3FPyFvlaFL9VPONmNs750j7~AynNAYFVZgCEv0~-XKWNf1oElDzyMRBqXkJ2xqjNoGJ-adhpq3c0EySjFJcFWmkPkFqkN0y7oS3HJdMbQ-Hm4KATiOkAZGtsAwzz6Nsv402hOjCg__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//039febe2739441dd/o3layer.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QGo4zNRrxST6dtpRJQN4Np2zzyJXt5~hEZg5HV1iSki2fTj2M5QkLIa5zDVjhg4mArw0x7k4bLgQBVCE5b2LJdSN9kn~qlw~tx4iqfdsPOvQxdVKwVftmcgJLnyT065MaAyICHjqWYxzMQzxjwZwWOPoGeaiK6GbW2GWcOZ24qY0ZahwB7OIZhAxF3E8XciDshJMNrIYYs13-K3FPyFvlaFL9VPONmNs750j7~AynNAYFVZgCEv0~-XKWNf1oElDzyMRBqXkJ2xqjNoGJ-adhpq3c0EySjFJcFWmkPkFqkN0y7oS3HJdMbQ-Hm4KATiOkAZGtsAwzz6Nsv402hOjCg__"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -271,7 +361,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//b78d279918024383/snarkify.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rNr28yduvm~ljfuimBoq2F7UE2uVZ6KK3TjZe8wxKbcqz2neCv77jZRUAHdUBscsDI7Pd21PEzmpKpZsiJNzoKoBb6r6s9F3WxqBgknuAnfjYRWrdRq4bA9E1Riu5sy~i0zLs~G4TB-WoNi89zF8BrgvBvcR-OfqdmVR2mC9S8vVcW4xovzk6f53JX5WWQOzFTfpXNWoingGz9NaxC30ixMo49ID0yAMk1LySnfFMDnVTHv2Xjo9OJ6L3oDOsYTaG9YHpTVeyqGi3F8tALniRz5ciHmhOf6falXn0ijIuuxfj6uEkJdux0XbhmLlf-V0hLUTfY0vb08Hab5pePi7kA__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//b78d279918024383/snarkify.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rNr28yduvm~ljfuimBoq2F7UE2uVZ6KK3TjZe8wxKbcqz2neCv77jZRUAHdUBscsDI7Pd21PEzmpKpZsiJNzoKoBb6r6s9F3WxqBgknuAnfjYRWrdRq4bA9E1Riu5sy~i0zLs~G4TB-WoNi89zF8BrgvBvcR-OfqdmVR2mC9S8vVcW4xovzk6f53JX5WWQOzFTfpXNWoingGz9NaxC30ixMo49ID0yAMk1LySnfFMDnVTHv2Xjo9OJ6L3oDOsYTaG9YHpTVeyqGi3F8tALniRz5ciHmhOf6falXn0ijIuuxfj6uEkJdux0XbhmLlf-V0hLUTfY0vb08Hab5pePi7kA__"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -280,7 +373,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//618069e2f89e424f/zevee.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=iXG6dCAmFA1IfEN4mfwo5YRHwEGP4BAI55oFfx04Z3eQ3NSffwPKi4fAyWrAkYnfpL9KLSJlTJ5oOQA2kdvfqR7mcOJGMZhSJZMVG-xkJNGwY6MWoEa97p2~nmUzM18i9aG~iqai5qqJncoBz7ttrtUkMUMmTBiQFmsaKHKfsESz1FWpKSt71~Qb4gTSspTtnOODjXL4pdhdfFGLTW84qV6Otu9mLYoTrlLF1dHL2klNg8-AllSZTOxrAzKyGChnT~97LzjDt6p~VJf3efBZkchVL7-fVW-C5J8eejyMUocqRweguWza7uIPKGyhMnAdK72APCxQu84-tyj~5lQy5g__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//618069e2f89e424f/zevee.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=iXG6dCAmFA1IfEN4mfwo5YRHwEGP4BAI55oFfx04Z3eQ3NSffwPKi4fAyWrAkYnfpL9KLSJlTJ5oOQA2kdvfqR7mcOJGMZhSJZMVG-xkJNGwY6MWoEa97p2~nmUzM18i9aG~iqai5qqJncoBz7ttrtUkMUMmTBiQFmsaKHKfsESz1FWpKSt71~Qb4gTSspTtnOODjXL4pdhdfFGLTW84qV6Otu9mLYoTrlLF1dHL2klNg8-AllSZTOxrAzKyGChnT~97LzjDt6p~VJf3efBZkchVL7-fVW-C5J8eejyMUocqRweguWza7uIPKGyhMnAdK72APCxQu84-tyj~5lQy5g__"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -289,10 +385,16 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//2509def4628f459e/bitfinity.webp?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zTs3LMpiyPU9a9yefAGnRwKa6sWN48dYL91w-QUi3JlRsqKLks4Rz6HQaQHIx7q0O9K9EspsRhgUPg2X0JzAHy3M8IJ5CU7liOk9XX4dVVpMV99zNBD9UJqiBJ6C791sBb84G~wPNdQ1HRjC1WP3Gpj6JaidYgHrNGzJyJfrSp6NFjBj-o4WA5o~t98MD8PNNbLehdyQhVwu0nvmR2awZCG7ZYKgZIlpM41SIdppXxrzV5y9YmYsax7X7g3LURgCnI3TcrmXOGQ9Bcrc9QW2-rCQUam9OEMoL1errvwJ72Rrevf3qYFqLvXLGYTZFAvACS9QLz32k0K3z1eQ~ELkrg__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//2509def4628f459e/bitfinity.webp?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zTs3LMpiyPU9a9yefAGnRwKa6sWN48dYL91w-QUi3JlRsqKLks4Rz6HQaQHIx7q0O9K9EspsRhgUPg2X0JzAHy3M8IJ5CU7liOk9XX4dVVpMV99zNBD9UJqiBJ6C791sBb84G~wPNdQ1HRjC1WP3Gpj6JaidYgHrNGzJyJfrSp6NFjBj-o4WA5o~t98MD8PNNbLehdyQhVwu0nvmR2awZCG7ZYKgZIlpM41SIdppXxrzV5y9YmYsax7X7g3LURgCnI3TcrmXOGQ9Bcrc9QW2-rCQUam9OEMoL1errvwJ72Rrevf3qYFqLvXLGYTZFAvACS9QLz32k0K3z1eQ~ELkrg__"
+                  />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="https://media-hosting.imagekit.io//24468a5134c5448f/bqlabs.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GtMVlfll~BzeU3qiLOwYhgO97yEcdQ5~g0MChSwYhi42Vad-5EG~E7jmw9Pxc0dYGzuKNNev9~sCrskP2Y5iOU-V4g3bAx5EVZWfnPYoZ4vU8BJZ1wNeENW3bRLsgNQVEBMNkIuonQQcavhB85GGZ1A5PJR8gPh9TQPABF0skp-9lw9SPsxyTrZ40Uy3Losqy1M67IRQWHnLkrX6bi2pxUMzfGPcikNK7saLowyLGdS8fBIYnGP~z8Xn6gJBvVz3pSRyEr2WXuYyRFwqFghVrgctqKUj7aq1lJDIwekw3h4khoEjx~eD8g5h7dtp-qlLlJxTfJmcJfkFPx-DFhvYyw__" />
+                  <img
+                    alt=""
+                    src="https://media-hosting.imagekit.io//24468a5134c5448f/bqlabs.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GtMVlfll~BzeU3qiLOwYhgO97yEcdQ5~g0MChSwYhi42Vad-5EG~E7jmw9Pxc0dYGzuKNNev9~sCrskP2Y5iOU-V4g3bAx5EVZWfnPYoZ4vU8BJZ1wNeENW3bRLsgNQVEBMNkIuonQQcavhB85GGZ1A5PJR8gPh9TQPABF0skp-9lw9SPsxyTrZ40Uy3Losqy1M67IRQWHnLkrX6bi2pxUMzfGPcikNK7saLowyLGdS8fBIYnGP~z8Xn6gJBvVz3pSRyEr2WXuYyRFwqFghVrgctqKUj7aq1lJDIwekw3h4khoEjx~eD8g5h7dtp-qlLlJxTfJmcJfkFPx-DFhvYyw__"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -313,7 +415,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="/static/media/playai.69af6f32d4447d4b96c9.jpg" />
+                  <img
+                    alt=""
+                    src="/static/media/playai.69af6f32d4447d4b96c9.jpg"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -340,7 +445,10 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="/static/media/nubit.1e89b72e541dc6f4be0f.png" />
+                  <img
+                    alt=""
+                    src="/static/media/nubit.1e89b72e541dc6f4be0f.png"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -355,13 +463,22 @@ function App() {
                   />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="/static/media/gateway.836adbca34253483a3c8.png" />
+                  <img
+                    alt=""
+                    src="/static/media/gateway.836adbca34253483a3c8.png"
+                  />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="/static/media/u2u.495ca3f11f5c84663a69.png" />
+                  <img
+                    alt=""
+                    src="/static/media/u2u.495ca3f11f5c84663a69.png"
+                  />
                 </div>
                 <div className="partnerItem ">
-                  <img alt="" src="/static/media/iotext.71fb4819782e86f6f962.png" />
+                  <img
+                    alt=""
+                    src="/static/media/iotext.71fb4819782e86f6f962.png"
+                  />
                 </div>
                 <div className="partnerItem ">
                   <img
@@ -387,7 +504,6 @@ function App() {
                     src="data:image/png;base64,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"
                   />
                 </div>
-              
               </div>
             </div>
           </div>
@@ -410,90 +526,26 @@ function App() {
             <div className="blog-card">
               <p className="blog-time">February 19, 2025 11:47:28 PM</p>
               <p className="blog-title-text">
-                Scaling the Bitcoin-backed internet: LayerEdge leverages RISC Zero's zkVM
-                and boundless for Proof on Bitcoin System.
+                Scaling the Bitcoin-backed internet: LayerEdge leverages RISC
+                Zero's zkVM and boundless for Proof on Bitcoin System.
               </p>
               <button className="blog-lernMore">Learn more</button>
             </div>
             <div className="blog-card">
               <p className="blog-time">February 6, 2025 9:23:15 PM</p>
-              <p className="blog-title-text">
-                LayerEdy Monthly Recap-January.
-              </p>
+              <p className="blog-title-text">LayerEdy Monthly Recap-January.</p>
               <button className="blog-lernMore">Learn more</button>
             </div>
             <div className="blog-card">
               <p className="blog-time">January 19, 2023 11:47:28 PM</p>
               <p className="blog-title-text">
-                LayerEde Testnet Launchu(Incentivized): Building the Bitcoin-backed Internet.
+                LayerEde Testnet Launchu(Incentivized): Building the
+                Bitcoin-backed Internet.
               </p>
               <button className="blog-lernMore">Learn more</button>
             </div>
           </div>
         </section>
-      </Element>
-
-      {/* Contact Section */}
-      <Element name="contact" className="contact-section">
-        <h2>Contact Us</h2>
-        <div className="contact-grid">
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//b78d279918024383/snarkify.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rNr28yduvm~ljfuimBoq2F7UE2uVZ6KK3TjZe8wxKbcqz2neCv77jZRUAHdUBscsDI7Pd21PEzmpKpZsiJNzoKoBb6r6s9F3WxqBgknuAnfjYRWrdRq4bA9E1Riu5sy~i0zLs~G4TB-WoNi89zF8BrgvBvcR-OfqdmVR2mC9S8vVcW4xovzk6f53JX5WWQOzFTfpXNWoingGz9NaxC30ixMo49ID0yAMk1LySnfFMDnVTHv2Xjo9OJ6L3oDOsYTaG9YHpTVeyqGi3F8tALniRz5ciHmhOf6falXn0ijIuuxfj6uEkJdux0XbhmLlf-V0hLUTfY0vb08Hab5pePi7kA__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//3812cbbe96804b33/orichi.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=28XDMYf~U26XUO9SmNM9iI-xN2AhoVzMQiAA9d0yvwoo2nramEF~JHgRtCZo4QM8NniSpZnlkiqcD4w9P00grBbAIDN79B7anu~Pl0C4QTOhwEqCgafe~Cboq4UVnxsh5PkquC6uhQpLKUmonNL8Th34GPsmS3ClH2RKnjHFuZ8kWXgROs22Vv42EvRqqVyREebdwhhkGpbOEae9oNdqcKPeeZaimJQGLBrGxh-rw-q7RXYAbFg-LF8IvI~e-WvgHlQITfw7q3hlDqAAdfpBHWd60r4gK6shePZuyFgmqMWpVc6eQeEFTHCod3nNATuu9Icb31Dc9kLZ6Uc2moqdtw__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//0fe28b0f345241f5/qai.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZM4WUNq~~v0Xo2q3~C2aiqwTOqoNNb91qeQhoGF1vny6Iv5MLVTz~rM6YQ7hHoIAb~eQG~V-8PSl4H2oPXUOQh0yZ-SJfrsyiA0iw1eFych2jhCgy-X9u4CQRtq9D19s-gsEiIbvmQbO31~Kx0K0gwWNcjUYZGMD5AHfVW-fsIJUToEBu1FFTmJEJdCUAb~5EKeiUZUFYMADS9KwZkBuqNZrKJ6G-3Ca9wbf5~jNCkulgJ6NZ-p-bomUecb5frCs-BOnSz91eBggcLUdAP5YKUTE7ZNxgWFFpGEN4OeMXwdzauG67Gw8619jkY1VwJwrT2-dv7uoEboujwNha5BO6g__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//24468a5134c5448f/bqlabs.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GtMVlfll~BzeU3qiLOwYhgO97yEcdQ5~g0MChSwYhi42Vad-5EG~E7jmw9Pxc0dYGzuKNNev9~sCrskP2Y5iOU-V4g3bAx5EVZWfnPYoZ4vU8BJZ1wNeENW3bRLsgNQVEBMNkIuonQQcavhB85GGZ1A5PJR8gPh9TQPABF0skp-9lw9SPsxyTrZ40Uy3Losqy1M67IRQWHnLkrX6bi2pxUMzfGPcikNK7saLowyLGdS8fBIYnGP~z8Xn6gJBvVz3pSRyEr2WXuYyRFwqFghVrgctqKUj7aq1lJDIwekw3h4khoEjx~eD8g5h7dtp-qlLlJxTfJmcJfkFPx-DFhvYyw__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//92ebe7a8aad6489c/clique.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p8oNUyomKTkg2XYz2R37ITZ1enj2LqiY5Om7MhTZxYRhLKdScHK15HO2A-s78Khgr-TWNGj4uWO100Gb-o0cne~w41kGIae22ylkc02ASsegLuOu~vmXaVjXzbKdBKsFqMTt0TQHCZ5nsrMwZN5yaGd7QErpKUjqlKo3JZfNRdXJ6ijgO2PqJh49mI2pNHrKL~FrvmLsn7jGGneWAaWVm2hkkA3e-9dblmaR7GT1t7VQdxPaipIe1Kt1BqtvYn5TON8dR3YGWtUZ-MxtTSB4Np3MnobSgcYLwtWFXrimC0AKztZd916PW-xLH4gKl6KBv2hxLe0Z6nquqxYNCUIkLQ__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//2385f1fa8aba42d8/zkm.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uaopkEPns9czQDfA93MvB5nOI4vefhsh~PGK1JKPrSjM-5mFIoP8XoELRKOBHkZeW1Mr8E6PW~aBoj-kTaBgTI94-N7R-wUEbJDhjXNGDf3nqpqxE31Yd~x2GwEXufr0WXK3g1RD~PpP7hySx4uBweDo7PbCFfcrQyR6wKDzUXMjl1JnOnhk70edkFZOoBzSZnlHsVuNM0DuVYVLwGfiRs~8CjlskqfnMHdQ5hz8XJS0u7CkOPK4FUm8EKQqUO4DsHjkJp3uUHRQ9zHYswAB5ikmrtPNY9WUz2D8T-z682BUM0WoDbN5NdqL5Ai2xiLDdc95ZglmXFKPKPqU4eujnA__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//8137ca83eb6f4698/degame.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vEk2YLtAS3cHFhW9w7LlHKTk4WJFrwf1SWjEcrCW4A-8NpL3ULA2biXLywuuLOXSRugBLe-t~grXNUW7IrQmX2ywfPq6CgYa4vZjlMqGrSdapZLXTjmQrlsV7R-aGMFbwphYT6VW0wqhytOUDPNoCqOW31WsUqyjUT3r1MEYCb2T~V0G6h2iES7EC9AaXdY5erOrR4nv8tvTarR8Ur3AcqlO~-ezl8RN0Df3zX5vdllvzJkAl~WxOgmSpbfoS~7ao54KHag53vt6VNCst6oiCKPjfWRF5zdVVHF7PMsswwYokdlHYAc3h67bHPsOgsQvmHxkdkzn6hiiaK39y27HBA__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-          <div className="contact-box">
-            <img className="contact-img" src="https://media-hosting.imagekit.io//eb3ea1d61ca54c7e/avail.png?Expires=1834716120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xagsLn~JUiksykU-z5Wl~Ui2B2QdAFdqeHplAjoGGI1upT3tVimMCxmmt1T0z-Cwd0fgPYrIMtRkItmPV3oGLZUIOMChoIk-93U5l4lgczQ9Wf0Nk54zbEANPsEzOTG6DS7VYX2TFDGA6KpRVl3G6VSTX2MmR~Q-S~KhPL5kPq-IRrVglLOY38~STrYcL70nJyhJxOubG7b80iTUEokauLF4G8uy5eEycdtp5uabZjGbHM61CecizNvMcZTz838N9g2HwpEwYxODYIBwEaibEgrYCQkwtjBGIv~H2c-IMAJypJQ3RBBNeodMbHbjXU4EgyVwUYeL1WMjqZol4XG9jg__"></img>
-            <p>
-              Blockchain technology is an advanced database mechanism that
-              allows transparent information sharing within a business network.
-            </p>
-          </div>
-        </div>
       </Element>
       <footer>
         <p>&copy; 2025 Blockchain. All Rights Reserved.</p>

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
+:root {
   --primary-font: "Poppins", sans-serif;
-  --opacity-text-color: hsla(0, 0%, 90%, .478);
+  --opacity-text-color: hsla(0, 0%, 90%, 0.478);
 }
 /* Reset some default styles */
 * {
@@ -327,27 +327,26 @@ nav ul li :hover {
   margin: 0 auto;
 }
 
-
 /* Container giữ marquee – giới hạn chiều rộng và ẩn phần tràn */
 .partnerList {
-  width: 100%;         /* Giới hạn theo bố cục của trang */
-  height: 120px;       /* Chiều cao theo thiết kế */
-  overflow: hidden;    /* Ẩn các phần nội dung vượt ra ngoài */
+  width: 100%; /* Giới hạn theo bố cục của trang */
+  height: 120px; /* Chiều cao theo thiết kế */
+  overflow: hidden; /* Ẩn các phần nội dung vượt ra ngoài */
   position: relative;
-  border: 2px solid rgba(96,96,96,0.159);
+  border: 2px solid rgba(96, 96, 96, 0.159);
 }
 /* Container marquee chứa tất cả các partnerItem */
 .marquee {
   display: flex;
-  flex-wrap: nowrap;   /* Giữ các hình theo hàng không xuống dòng */
+  flex-wrap: nowrap; /* Giữ các hình theo hàng không xuống dòng */
   /* Không cần đặt width cho .marquee – để nó tự mở rộng theo nội dung */
   animation: marqueeAnim 30s linear infinite;
   column-gap: 7rem;
 }
 /* Mỗi phần tử partnerItem: kích thước cố định, khoảng cách hợp lý */
 .partnerItem {
-  flex: none;          /* Không co giãn */
-  width: 100px;        /* Bạn có thể điều chỉnh kích thước theo ý */
+  flex: none; /* Không co giãn */
+  width: 100px; /* Bạn có thể điều chỉnh kích thước theo ý */
   height: 50px;
   margin-right: 20px;
 }
@@ -387,7 +386,7 @@ nav ul li :hover {
 .blog-title {
   font-weight: 700;
   font-size: 60px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   margin-bottom: 2rem;
   color: #edf2f7;
   text-align: center;
@@ -446,7 +445,7 @@ nav ul li :hover {
 
 .blog-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
 
 /* Các kiểu khác như nút, blog-more ... giữ nguyên hoặc chỉnh sửa theo nhu cầu */
@@ -464,28 +463,25 @@ nav ul li :hover {
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  width: max-content;  /* Điều này giúp container co lại theo nội dung, nhưng có thể gây vấn đề trên mobile */
+  width: max-content; /* Điều này giúp container co lại theo nội dung, nhưng có thể gây vấn đề trên mobile */
 }
 
-
-.blog-title
-{
+.blog-title {
   font-weight: 700;
   font-size: 60px;
-  font-family: 'Poppins'
+  font-family: "Poppins";
 }
 
 .blog-date {
   font-size: 0.875rem;
   color: #a0aec0; /* Màu chữ sáng */
 }
-.blog-lernMore
-{
+.blog-lernMore {
   background: transparent;
   border: none;
   color: #fff;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   padding: 0;
 }
@@ -520,7 +516,7 @@ nav ul li :hover {
 }
 
 .blog-button:hover {
-  background-color: rgba(var(--body-rgb), .5);;
+  background-color: rgba(var(--body-rgb), 0.5);
 }
 
 @keyframes fadeIn {
@@ -561,37 +557,122 @@ nav ul li :hover {
   text-align: center;
 }
 
-.contact-section h2 {
+.contact-title h2 {
   font-size: 2.8rem;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   color: #fcfcfc;
   font-weight: bold;
+}
+.contact-title p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.contact__btn {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.contact__btn button {
+  padding: 10px 20px;
+  border: 1px solid #818181; /* Màu viền xanh dương */
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contact__btn button:hover {
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact__btn button:active {
+  box-shadow: none;
+}
+
+.contact__btn button:focus {
+  background-color: #a8a8a870;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .contact__btn {
+    gap: 5px;
+  }
+
+  .contact__btn button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.seeAll {
+  position: relative; /* Đặt phần tử cha ở vị trí tương đối */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.seeAll__btn {
+  position: absolute;
+  right: 250px;
+  top: 70%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.seeAll__btn:hover {
+  background-color: #5555553b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seeAll__btn:active {
+  transform: translateY(-50%) translateX(0);
+  box-shadow: none;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
   max-width: 1300px;
   margin: auto;
 }
 
 .contact-box {
-  background-color: rgba(151, 151, 151, 0.281);
-  padding: 40px;
+  padding: 20px;
   border-radius: 12px;
+  border: 1px solid #444444;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: start;
+  cursor: pointer;
+}
+.contact-box p {
+  color: #f7f7f7;
+  font-size: 14px;
 }
 
 .contact-img {
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 50px;
 }
 
 .contact-box:hover {
-  transform: translateY(-7px);
+  border: 1px solid #ffffff;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -612,15 +693,15 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
   .blog-more {
-    width: 100%;         /* Chiếm toàn bộ chiều rộng */
-    max-width: 75%;     /* Không vượt quá chiều rộng của viewport */
-    margin: 0;      /* Căn giữa nếu có chiều rộng cố định */
-    padding: 15px;       /* Giảm padding nếu cần */
-    box-sizing: border-box;  /* Bao gồm padding trong width */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 75%; /* Không vượt quá chiều rộng của viewport */
+    margin: 0; /* Căn giữa nếu có chiều rộng cố định */
+    padding: 15px; /* Giảm padding nếu cần */
+    box-sizing: border-box; /* Bao gồm padding trong width */
     display: flex;
     justify-content: space-between;
   }
-  
+
   /* Các style đã có cho blog-title và blog-button như đã đưa ra trước đó */
   .blog-title {
     font-size: 2rem;
@@ -630,16 +711,16 @@ footer {
   }
 
   .PrimaryButtonLayout_container__LA3KG {
-    width: 100%;              /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
-    max-width: 150px;         /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
-    margin: 0;          /* Căn giữa container */
+    width: 100%; /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
+    max-width: 150px; /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
+    margin: 0; /* Căn giữa container */
     /* display: flex;
     justify-content: center;   */
     box-sizing: border-box;
   }
 
   .blog-button {
-    width: 100%;              /* Nút chiếm toàn bộ chiều rộng container */
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng container */
     max-width: 100%;
     font-size: 15px;
     padding: 8px 14px;
@@ -649,65 +730,65 @@ footer {
     max-width: 100% !important;
     width: 75% !important;
     margin: 0 !important;
-    padding: 0 1rem;  /* Điều chỉnh padding để vừa với màn hình nhỏ */
+    padding: 0 1rem; /* Điều chỉnh padding để vừa với màn hình nhỏ */
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
- /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
- .blog-card {
-  width: 100%;
-  height: auto;              /* Cho phép card tự cao theo nội dung */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;    /* Xếp các phần tử theo cột */
-  gap: 10px;
-  border: 1px solid hsl(0, 0%, 50%, 0.178);
-  overflow: hidden;
-  box-sizing: border-box;
-}
+  /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
+  .blog-card {
+    width: 100%;
+    height: auto; /* Cho phép card tự cao theo nội dung */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    gap: 10px;
+    border: 1px solid hsl(0, 0%, 50%, 0.178);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 
-/* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
-.blog-title-text {
-  font-size: 26px;
-  -webkit-line-clamp: 2;         /* Giới hạn hiển thị 2 dòng */
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  max-height: 3em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  width: 100%;
-}
+  /* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
+  .blog-title-text {
+    font-size: 26px;
+    -webkit-line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    width: 100%;
+  }
 
-/* Phần chân của card chứa ngày và nút "Learn more" */
-.blog-card-footer {
-  display: flex;
-  flex-direction: row;          /* Đặt ngày và nút cùng hàng */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
+  /* Phần chân của card chứa ngày và nút "Learn more" */
+  .blog-card-footer {
+    display: flex;
+    flex-direction: row; /* Đặt ngày và nút cùng hàng */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-/* Style cho ngày */
-.blog-time {
-  font-size: 16px;
-  margin: 0;
-}
+  /* Style cho ngày */
+  .blog-time {
+    font-size: 16px;
+    margin: 0;
+  }
 
-/* Style cho nút "Learn more" */
-.blog-lernMore {
-  font-size: 18px;
-  margin: 0;
-  display: flex;
-  /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
-}
-.cook-section h2 {
-  text-align: left;
-  width: 100%;
-  font-size: 55px;
-  padding-left: 15px;
+  /* Style cho nút "Learn more" */
+  .blog-lernMore {
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
+  }
+  .cook-section h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 55px;
+    padding-left: 15px;
   }
 }
 
@@ -730,15 +811,15 @@ footer {
     padding: 15px;
   }
   .blog-more {
-    width: 100%;         /* Chiếm toàn bộ chiều rộng */
-    max-width: 55%;     /* Không vượt quá chiều rộng của viewport */
-    margin: 0;      /* Căn giữa nếu có chiều rộng cố định */
-    padding: 15px;       /* Giảm padding nếu cần */
-    box-sizing: border-box;  /* Bao gồm padding trong width */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 55%; /* Không vượt quá chiều rộng của viewport */
+    margin: 0; /* Căn giữa nếu có chiều rộng cố định */
+    padding: 15px; /* Giảm padding nếu cần */
+    box-sizing: border-box; /* Bao gồm padding trong width */
     display: flex;
     justify-content: left;
   }
-  
+
   /* Các style đã có cho blog-title và blog-button như đã đưa ra trước đó */
   .blog-title {
     font-size: 2rem;
@@ -748,16 +829,16 @@ footer {
   }
 
   .PrimaryButtonLayout_container__LA3KG {
-    width: 100%;              /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
-    max-width: 150px;         /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
-    margin: 0;          /* Căn giữa container */
+    width: 100%; /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
+    max-width: 150px; /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
+    margin: 0; /* Căn giữa container */
     /* display: flex;
     justify-content: center;   */
     box-sizing: border-box;
   }
 
   .blog-button {
-    width: 100%;              /* Nút chiếm toàn bộ chiều rộng container */
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng container */
     max-width: 100%;
     font-size: 15px;
     padding: 8px 14px;
@@ -767,76 +848,75 @@ footer {
     max-width: 100% !important;
     width: 55% !important;
     margin: 0 !important;
-    padding: 0 1rem;  /* Điều chỉnh padding để vừa với màn hình nhỏ */
+    padding: 0 1rem; /* Điều chỉnh padding để vừa với màn hình nhỏ */
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
- /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
- .blog-card {
-  width: 100%;
-  height: auto;              /* Cho phép card tự cao theo nội dung */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;    /* Xếp các phần tử theo cột */
-  gap: 10px;
-  border: 1px solid hsl(0, 0%, 50%, 0.178);
-  overflow: hidden;
-  box-sizing: border-box;
-}
+  /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
+  .blog-card {
+    width: 100%;
+    height: auto; /* Cho phép card tự cao theo nội dung */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    gap: 10px;
+    border: 1px solid hsl(0, 0%, 50%, 0.178);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 
-/* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
-.blog-title-text {
-  font-size: 16px;
-  -webkit-line-clamp: 2;         /* Giới hạn hiển thị 2 dòng */
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  max-height: 3em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  width: 100%;
-}
+  /* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
+  .blog-title-text {
+    font-size: 16px;
+    -webkit-line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    width: 100%;
+  }
 
-/* Phần chân của card chứa ngày và nút "Learn more" */
-.blog-card-footer {
-  display: flex;
-  flex-direction: row;          /* Đặt ngày và nút cùng hàng */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
+  /* Phần chân của card chứa ngày và nút "Learn more" */
+  .blog-card-footer {
+    display: flex;
+    flex-direction: row; /* Đặt ngày và nút cùng hàng */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-/* Style cho ngày */
-.blog-time {
-  font-size: 12px;
-  margin: 0;
-}
+  /* Style cho ngày */
+  .blog-time {
+    font-size: 12px;
+    margin: 0;
+  }
 
-/* Style cho nút "Learn more" */
-.blog-lernMore {
-  font-size: 14px;
-  margin: 0;
-  display: flex;
-  /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
-}
-.cook-main {
-  display: flex
-;
-  flex-direction: column;
-  justify-content: left;
-  row-gap: 70px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.cook-section h2 {
-text-align: left;
-width: 100%;
-font-size: 27px;
-padding-left: 15px;
-}
+  /* Style cho nút "Learn more" */
+  .blog-lernMore {
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
+  }
+  .cook-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 70px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cook-section h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 27px;
+    padding-left: 15px;
+  }
 }
 @media (max-width: 550px) {
   .contact-grid {
@@ -850,15 +930,15 @@ padding-left: 15px;
     font-size: 1rem;
   }
   .blog-more {
-    width: 100%;         /* Chiếm toàn bộ chiều rộng */
-    max-width: 55%;     /* Không vượt quá chiều rộng của viewport */
-    margin: 0;      /* Căn giữa nếu có chiều rộng cố định */
-    padding: 15px;       /* Giảm padding nếu cần */
-    box-sizing: border-box;  /* Bao gồm padding trong width */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 55%; /* Không vượt quá chiều rộng của viewport */
+    margin: 0; /* Căn giữa nếu có chiều rộng cố định */
+    padding: 15px; /* Giảm padding nếu cần */
+    box-sizing: border-box; /* Bao gồm padding trong width */
     display: flex;
     justify-content: left;
   }
-  
+
   /* Các style đã có cho blog-title và blog-button như đã đưa ra trước đó */
   .blog-title {
     font-size: 1.5rem;
@@ -868,16 +948,16 @@ padding-left: 15px;
   }
 
   .PrimaryButtonLayout_container__LA3KG {
-    width: 100%;              /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
-    max-width: 150px;         /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
-    margin: 0;          /* Căn giữa container */
+    width: 100%; /* Cho phép container chiếm toàn bộ chiều rộng có sẵn */
+    max-width: 150px; /* Hoặc một giá trị cố định nhỏ hơn để tránh vượt ra ngoài */
+    margin: 0; /* Căn giữa container */
     /* display: flex;
     justify-content: center;   */
     box-sizing: border-box;
   }
 
   .blog-button {
-    width: 100%;              /* Nút chiếm toàn bộ chiều rộng container */
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng container */
     max-width: 100%;
     font-size: 15px;
     padding: 8px 14px;
@@ -887,74 +967,73 @@ padding-left: 15px;
     max-width: 100% !important;
     width: 30% !important;
     margin: 0 !important;
-    padding: 0 1rem;  /* Điều chỉnh padding để vừa với màn hình nhỏ */
+    padding: 0 1rem; /* Điều chỉnh padding để vừa với màn hình nhỏ */
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
- /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
- .blog-card {
-  width: 100%;
-  height: auto;              /* Cho phép card tự cao theo nội dung */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;    /* Xếp các phần tử theo cột */
-  gap: 10px;
-  border: 1px solid hsl(0, 0%, 50%, 0.178);
-  overflow: hidden;
-  box-sizing: border-box;
-}
+  /* Blog card: chuyển sang layout cột, bỏ chiều cao cố định */
+  .blog-card {
+    width: 100%;
+    height: auto; /* Cho phép card tự cao theo nội dung */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    gap: 10px;
+    border: 1px solid hsl(0, 0%, 50%, 0.178);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 
-/* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
-.blog-title-text {
-  font-size: 14px;
-  -webkit-line-clamp: 2;         /* Giới hạn hiển thị 2 dòng */
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  max-height: 3em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  width: 100%;
-}
+  /* Phần tiêu đề bài: giảm kích thước chữ và đảm bảo không vượt quá 2 dòng */
+  .blog-title-text {
+    font-size: 14px;
+    -webkit-line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    width: 100%;
+  }
 
-/* Phần chân của card chứa ngày và nút "Learn more" */
-.blog-card-footer {
-  display: flex;
-  flex-direction: row;          /* Đặt ngày và nút cùng hàng */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
+  /* Phần chân của card chứa ngày và nút "Learn more" */
+  .blog-card-footer {
+    display: flex;
+    flex-direction: row; /* Đặt ngày và nút cùng hàng */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-/* Style cho ngày */
-.blog-time {
-  font-size: 12px;
-  margin: 0;
-}
+  /* Style cho ngày */
+  .blog-time {
+    font-size: 12px;
+    margin: 0;
+  }
 
-/* Style cho nút "Learn more" */
-.blog-lernMore {
-  font-size: 14px;
-  margin: 0;
-  display: flex;
-  /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
-}
-.cook-main {
-  display: flex
-;
-  flex-direction: column;
-  justify-content: left;
-  row-gap: 70px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.cook-section h2 {
-text-align: left;
-width: 100%;
-font-size: 25px;
-padding-left: 15px;
-}
+  /* Style cho nút "Learn more" */
+  .blog-lernMore {
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    /* Nếu cần, bạn có thể thêm padding hoặc điều chỉnh thêm khoảng cách */
+  }
+  .cook-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 70px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cook-section h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    padding-left: 15px;
+  }
 }
