@@ -147,50 +147,43 @@ function App() {
 
       {/* Blog Section */}
       <Element name="blog">
-        <section className="blog-section">
-          <div className="blog-more">
-            <button className="blog-button">View more on M</button>
-          </div>
+      <section className="blog-section">
+        <div className="blog-more">
           <h2 className="blog-title">What's new?</h2>
-          <div className="blog-main">
-            <div className="blog-card">
-              <div className="blog-header">
-                <p className="blog-date">February 19, 2025, 11:47:57 PM</p>
-                <h3 className="blog-title-text">
-                  Scaling the Bitcoin-backed Internet: LayerEdge leverages RISC
-                  Zero's zkVM and Boundless for Proof...
-                </h3>
-              </div>
-              <a href="#" className="blog-link">
-                Learn More
-              </a>
-            </div>
-            <div className="blog-card">
-              <div className="blog-header">
-                <p className="blog-date">February 6, 2025, 9:26:13 PM</p>
-                <h3 className="blog-title-text">
-                  LayerEdge Monthly Recap—January
-                </h3>
-              </div>
-              <a href="#" className="blog-link">
-                Learn More
-              </a>
-            </div>
-            <div className="blog-card">
-              <div className="blog-header">
-                <p className="blog-date">January 23, 2025, 7:01:15 AM</p>
-                <h3 className="blog-title-text">
-                  LayerEdge Testnet Launch (Incentivized): Building the
-                  Bitcoin-Backed Internet
-                </h3>
-              </div>
-              <a href="#" className="blog-link">
-                Learn More
-              </a>
-            </div>
+          <div className="PrimaryButtonLayout_container__LA3KG">
+            <button className="blog-button">
+              View more on <span style={{ fontWeight: 550 }}>M</span>
+            </button>
           </div>
-        </section>
-      </Element>
+        </div>
+
+        <div className="blog-main">
+          <div className="blog-card">
+            <p className="blog-time">February 19, 2025 11:47:28 PM</p>
+            <p className="blog-title-text">
+              Scaling the Bitcoin-backed internet: LayerEdge leverages RISC Zero's zkVM
+              and boundless for Proof on Bitcoin System.
+            </p>
+            <button className="blog-lernMore">Learn more</button>
+          </div>
+          <div className="blog-card">
+            <p className="blog-time">February 6, 2025 9:23:15 PM</p>
+            <p className="blog-title-text">
+              LayerEdy Monthly Recap-January.
+            </p>
+            <button className="blog-lernMore">Learn more</button>
+          </div>
+          <div className="blog-card">
+            <p className="blog-time">January 19, 2023 11:47:28 PM</p>
+            <p className="blog-title-text">
+              LayerEde Testnet Launchu(Incentivized): Building the Bitcoin-backed Internet.
+            </p>
+            <button className="blog-lernMore">Learn more</button>
+          </div>
+        </div>
+      </section>
+    </Element>
+      
       {/* Contact Section */}
       <Element name="contact" className="contact-section">
         <h2>Contact Us</h2>
