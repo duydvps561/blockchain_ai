@@ -50,7 +50,7 @@ export default function DocsWebsite() {
       <nav className="docs-navbar">
         <div className="docs-logo">
           <img
-            src="https://landingpage-blockchain.vercel.app/img/logo.png"
+            src="https://media-hosting.imagekit.io//7002c0c85af843d1/logo-removebg-preview.png?Expires=1836138153&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wmdY~NaTRMdv4vdhJ~gn0tG0hrZlqYNTny1tGWnph3Se~QBWGIADSxmo1gOLjawdOW3Y1X7qUAwFjGCYkDXg9vxGuI3zC~n3o2K24AG2m21MweUCGQCTM3CwTkN7zsJ1zw3yOCbO1BdJX8nafDThP7fsRXKlBzjbUPk3V~iHJ67-O6SwPqeVo9RE5ucVz1qWjJrK3MJ7Tqv9vnu1vpVmCEML8FhD97ij-wQe2MMmBy9el-xFhgKAQw89THDQhSoUZ7EloiBbnrr3028GKzfxwCqBaHgtruBB-60hKehxg90wGkqmLJ6pbpIl-WDselAk9svapgJXEZegWXLzjhSCGA__"
             alt="Logo"
           />
         </div>
