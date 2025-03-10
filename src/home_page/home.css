@@ -2055,6 +2055,15 @@ footer {
   }
 }
 @media (max-width: 431px) {
+  .cook-section {
+    text-align: center;
+    width: 430px;
+}
+  .features h2 {
+    position: relative;
+    text-align: center;
+    left: 0;
+  }
   nav
   {
     width: 430px;
@@ -2125,11 +2134,11 @@ footer {
   }
   .contact-section
   {
-    width: 41.5%;
+    width: 414px;
   }
   .features
   {
-    width: 41.5%;
+    width: 414px;
   }
   .feature-main
   {
