@@ -1,5 +1,4 @@
 :root {
-  --primary-color: #bb86fc;
   --secondary-color: #3700b3;
   --background-color: #121212;
   --navbar-bg-color: #1e1e1e;
@@ -172,7 +171,7 @@ body {
 }
 
 .info-link {
-  color: var(--primary-color);
+  color: #bb86fc;
   text-decoration: underline;
 }
 
