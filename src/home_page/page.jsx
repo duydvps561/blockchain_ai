@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DocsWebsite from "../docs/page";
+import Dashboard from "../Dashboard/page";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link, Element } from "react-scroll";
 import "./home.css";
@@ -135,9 +136,12 @@ function home_page() {
             </Link>
           </li>
         </ul>
-        <button className="wallet-btn desktop-menu">
-          Run a light node
-        </button>
+        <button 
+      className="wallet-btn desktop-menu" 
+      onClick={() => navigate("/dashboard")}
+    >
+      Run a light node
+    </button>
         <div
           className="PrimaryHeader_toggleDropdown__w2NQG"
           onClick={toggleMobileMenu}  // Sự kiện bấm sẽ gọi hàm toggleMobileMenu
@@ -243,7 +247,6 @@ function home_page() {
           </div>
         </header>
       </Element>
-      {/* Routes */}
       <Routes>
         <Route path="/docs" element={<DocsWebsite />} />
       </Routes>
