@@ -2435,7 +2435,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 31.5%;
+    width: 100%;
     backdrop-filter: blur(20px);
     background: linear-gradient(180deg, rgba(0, 0, 0, .501) 70%, hsla(0, 0%, 53%, .244));
     position: fixed;
